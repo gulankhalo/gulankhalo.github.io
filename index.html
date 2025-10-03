@@ -10,14 +10,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fdf6f0;
+            background-color: #fff;
             color: #333;
         }
 
         header {
-            background-color: #E63946;
+            background-color: #C64C4C;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
         }
 
@@ -28,6 +28,7 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         nav ul li a {
@@ -38,40 +39,50 @@
         }
 
         nav ul li a:hover {
-            color: #ffd6d6;
+            color: #FEE6A8;
         }
 
         section {
             padding: 3rem 1rem;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
         }
 
         h2 {
-            color: #E63946;
+            color: #C64C4C;
             margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Über uns */
+        #about p {
+            font-size: 1.1rem;
             text-align: center;
         }
 
         /* Mitglieder Geschichten */
         .story {
-            background-color: #fff0f0;
-            border-left: 5px solid #E63946;
+            background-color: #FEE6A8;
+            border-left: 5px solid #C64C4C;
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 5px;
         }
 
-        /* Projektliste */
+        /* Projekte & Pläne */
         ul.project-list {
             list-style: disc inside;
             padding-left: 1rem;
+            max-width: 700px;
+            margin: auto;
         }
 
         /* Feedback-Formular */
         form {
             display: flex;
             flex-direction: column;
+            max-width: 600px;
+            margin: auto;
         }
 
         form label {
@@ -79,16 +90,16 @@
         }
 
         form input, form textarea {
-            padding: 0.5rem;
+            padding: 0.6rem;
             margin-top: 0.3rem;
-            border: 1px solid #ccc;
+            border: 1px solid #A8A55B;
             border-radius: 5px;
         }
 
         button {
             margin-top: 1.5rem;
             padding: 0.7rem;
-            background-color: #E63946;
+            background-color: #A8A55B;
             color: white;
             border: none;
             border-radius: 5px;
@@ -98,12 +109,12 @@
         }
 
         button:hover {
-            background-color: #d62839;
+            background-color: #7f8642;
         }
 
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #C64C4C;
             color: white;
             text-align: center;
             padding: 1rem 0;
@@ -126,9 +137,8 @@
         <nav>
             <ul>
                 <li><a href="#about">Über uns</a></li>
-                <li><a href="#stories">Mitglieder erzählen</a></li>
-                <li><a href="#projects">Projekte & Pläne</a></li>
-                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#members">Mitglieder</a></li>
+                <li><a href="#projects">Projekte</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
@@ -136,41 +146,28 @@
 
     <section id="about">
         <h2>Über uns</h2>
-        <p>Wir sind die Kurdische Union der Studierenden im Ausland. Unser Ziel ist es, Studierende zu vernetzen, Erfahrungen auszutauschen und gemeinsame Projekte zu starten.</p>
+        <p>Die Kurdische Union der Studierenden im Ausland verbindet Studierende weltweit, um Erfahrungen auszutauschen, Projekte zu starten und die Gemeinschaft zu stärken.</p>
     </section>
 
-    <section id="stories">
+    <section id="members">
         <h2>Mitglieder erzählen</h2>
         <div class="story">
             <h3>Mitglied 1</h3>
-            <p>Hier erzählt ein Studierender seine persönliche Geschichte und Erfahrungen im Ausland.</p>
+            <p>Erzählt hier seine Geschichte, wie er das Studium und das Leben im Ausland erlebt.</p>
         </div>
         <div class="story">
             <h3>Mitglied 2</h3>
-            <p>Ein anderes Mitglied berichtet über seinen Studienalltag und Herausforderungen.</p>
+            <p>Berichtet von seinen Erfahrungen und Tipps für neue Studierende.</p>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projekte & Pläne</h2>
         <ul class="project-list">
-            <li>Kickoff-Event: Kennenlernen & Austausch</li>
-            <li>Workshops & Seminare zu Studium & Karriere</li>
-            <li>Community-Projekte zur Unterstützung von Studierenden</li>
+            <li>Community-Treffen & Vernetzung</li>
+            <li>Workshops & Bildungsprojekte</li>
+            <li>Unterstützung für neue Studierende</li>
         </ul>
-    </section>
-
-    <section id="feedback">
-        <h2>Feedback & Brainstorming</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Dein Name" required>
-
-            <label for="message">Nachricht:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Deine Ideen oder Feedback" required></textarea>
-
-            <button type="submit">Senden</button>
-        </form>
     </section>
 
     <section id="contact">
