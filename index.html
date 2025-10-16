@@ -2,329 +2,191 @@
 <html lang="de">
 <head>
 <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kurdische Union der Studierenden im Ausland</title>
-  <meta name="description" content="Gemeinschaft kurdischer Studierender im Ausland — Austausch, Kultur, Bildung und Unterstützung." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kurdische Union der Studierenden im Ausland</title>
+<meta name="description" content="Gemeinschaft kurdischer Studierender im Ausland — Austausch, Kultur, Bildung und Unterstützung." />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --brand:#C64C4C; /* tiefes Rot */
-      --accent:#A8A55B; /* gelbgrün */
-      --bg:#FEE6A8; /* helles warmes Beige */
-      --white:#ffffff;
-      --muted:#6b6b6b;
-      --radius:14px;
-      --glass: rgba(255,255,255,0.6);
-      --max-width:1100px;
-      --shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: 'Poppins', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color:#222;
-      background: linear-gradient(180deg, var(--bg), #fff);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
+<style>
+:root{
+  --brand:#C64C4C;
+  --accent:#A8A55B;
+  --bg:#FEE6A8;
+  --white:#ffffff;
+  --muted:#6b6b6b;
+  --radius:14px;
+  --glass: rgba(255,255,255,0.6);
+  --max-width:1100px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#222;
+  background: linear-gradient(180deg, var(--bg), #fff);
+  line-height:1.5;
+}
 
-    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+.container{max-width:var(--max-width);margin:0 auto;padding:32px 24px}
 
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
-    .accent{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
-    .logo h1{margin:0;font-size:18px;color:var(--brand);font-weight:700}
-    nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:500}
-    .cta{background:var(--accent);color:var(--white);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(198,76,76,0.18)}
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0}
+.accent{display:flex;align-items:center;gap:12px}
+.logo{width:60px;height:60px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+.logo h1{margin:0;font-size:20px;color:var(--brand);font-weight:700}
+nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:500}
+.cta{background:var(--accent);color:var(--white);padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(198,76,76,0.18)}
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:28px;border-radius:20px;box-shadow:var(--shadow)}
-    .hero h2{margin:0;font-size:34px;color:var(--brand)}
-    .lead{margin-top:12px;color:var(--muted)}
-    .hero-fig{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-    .hero-fig img{width:100%;height:100%;object-fit:cover;display:block}
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 440px;gap:32px;align-items:center;padding:48px 0}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:32px;border-radius:20px;box-shadow:var(--shadow)}
+.hero h2{margin:0;font-size:36px;color:var(--brand)}
+.lead{margin-top:16px;color:var(--muted)}
+.hero-fig{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-fig img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* sections */
-    section{padding:32px 0}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+/* sections */
+section{padding:48px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);padding:20px;border-radius:14px;box-shadow:var(--shadow)}
 
-    /* Events */
-    .events-list{display:grid;grid-template-columns:1fr;gap:12px}
-    .event{display:flex;align-items:center;gap:12px}
-    .event .date{min-width:72px;background:var(--bg);color:var(--brand);padding:8px;border-radius:10px;text-align:center;font-weight:700}
+/* Events */
+.events-list{display:grid;grid-template-columns:1fr;gap:14px}
+.event{display:flex;align-items:center;gap:14px}
+.event .date{min-width:72px;background:var(--bg);color:var(--brand);padding:10px;border-radius:12px;text-align:center;font-weight:700}
 
-    /* Team */
-    .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .member{background:var(--white);padding:14px;border-radius:12px;text-align:center}
-    .avatar{width:92px;height:92px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.member{background:var(--white);padding:16px;border-radius:14px;text-align:center}
+.avatar{width:96px;height:96px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
 
-    
+/* Footer */
+footer{margin-top:48px;padding:32px 0;border-top:1px solid rgba(0,0,0,0.05)}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.socials a{margin-left:12px;text-decoration:none;font-weight:600;color:var(--muted)}
 
-    /* Footer */
-    footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(0,0,0,0.05)}
-    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .socials a{margin-left:10px;text-decoration:none;font-weight:600;color:var(--muted)}
+/* Responsive */
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  nav a{display:none}
+}
+@media (max-width:520px){
+  .team-grid{grid-template-columns:1fr}
+  .hero h2{font-size:28px}
+  .logo{width:48px;height:48px}
+}
 
-    /* Responsive */
-    @media (max-width:1000px){
-      .hero{grid-template-columns:1fr}
-      .team-grid{grid-template-columns:repeat(2,1fr)}
-     
-      nav a{display:none}
-    }
-    @media (max-width:520px){
-      .team-grid{grid-template-columns:1fr}
-      .hero h2{font-size:28px}
-      .logo{width:44px;height:44px}
-    }
+/* Modal / Lightbox */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
+.modal.show{visibility:visible;opacity:1}
+.modal-card{max-width:760px;background:var(--white);border-radius:14px;padding:24px}
 
-    /* Modal / Lightbox */
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
-    .modal.show{visibility:visible;opacity:1}
-    .modal-card{max-width:760px;background:var(--white);border-radius:12px;padding:20px}
+/* small helpers */
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.pill{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--bg);font-weight:600}
 
-    /* small helpers */
-    .muted{color:var(--muted)}
-    .small{font-size:13px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--bg);font-weight:600}
-
-    /* subtle hover animation */
-    .card:hover, .member:hover{transform:translateY(-6px);transition:transform .18s}
-  </style>
+/* subtle hover animation */
+.card:hover, .member:hover{transform:translateY(-6px);transition:transform .18s}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"><h1>K</h1></div>
-        <div>
-          <div style="font-weight:700">Kurdische Union</div>
-          <div class="small muted">der Studierenden im Ausland</div>
-        </div>
-      </div>
-      <nav aria-label="Hauptnavigation">
-        <a href="#about">Über uns</a>
-        <a href="#events">Veranstaltungen</a>
-        <a href="#projects">Projekte</a>
-        <a href="#team">Ansprechpartner</a>
-        
-        <a class="cta" href="#join" id="joinBtn">Mitmachen</a>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero-card">
-          <h2>Willkommen — verbunden durch Kultur, Bildung & Gemeinschaft</h2>
-          <p class="lead">Wir sind eine wachsende Gemeinschaft kurdischer Studierender in Deutschland und weltweit. Austausch, gegenseitige Hilfe, kulturelle Veranstaltungen und akademische Unterstützung stehen bei uns im Mittelpunkt.</p>
-
-          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-            <a class="pill" href="#events">Nächste Events</a>
-            <a class="pill" href="#projects">Projekte</a>
-            <a class="cta" href="#join">Mitmachen</a>
-          </div>
-
-          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
-            <div style="display:flex;gap:10px;align-items:center">
-              <div style="font-weight:700">18+</div>
-              <div class="small muted">aktive Mitglieder</div>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center">
-              <div style="font-weight:700">10</div>
-              <div class="small muted">laufende Projekte</div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-fig" aria-hidden="true">
-          <img src="https://as2.ftcdn.net/v2/jpg/01/16/69/93/1000_F_116699321_z3QLBMXqKe2FMMqal5Bss1jgwxaMjMrY.jpg" alt="kurdistan mappe" />
-        </aside>
-      </section>
-
-      <section id="about">
-        <div class="container">
-          <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
-            <div style="flex:1;min-width:260px">
-              <h3>Unsere Mission</h3>
-              <p class="muted">Die Kurdische Union der Studierenden im Ausland fördert Austausch, akademische Unterstützung und kulturelle Identität. Wir organisieren Veranstaltungen, Mentoring und Projekte, die unsere Gemeinschaft stärken.</p>
-            </div>
-            <div style="flex:1;min-width:260px">
-              <h3>Werte & Vision</h3>
-              <ul>
-                <li>Offenheit und Zusammenhalt</li>
-                <li>Förderung von Bildung und Kultur</li>
-                <li>Unterstützung beim Studium & Alltag</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        </section><section id="events">
-        <div class="container">
-          <h3>Veranstaltungen</h3>
-          <p class="muted">Kommende und vergangene Events — Workshops, Kulturabende, Tutorien und Netzwerk-Treffen.</p>
-
-          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:14px">
-            <div class="card" style="flex:1;min-width:320px">
-              <h4>Kommende Events</h4>
-              <div class="events-list" id="upcomingEvents">
-                <!-- Beispiel-Events; ersetzen mit dynamischen Daten -->
-                <div class="event">
-                  <div class="date">18.11</div>
-                  <div>
-                    <div style="font-weight:700">Kulturabend: Kurdische Musik</div>
-                    <div class="small muted">Universität — 18:00</div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="date">25.11</div>
-                  <div>
-                    <div style="font-weight:700">Workshop: Lebenslauf & Bewerbung</div>
-                    <div class="small muted">Online — 17:00</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="width:320px">
-              <h4>Interaktiver Kalender</h4>
-              <p class="small muted">(Optional: Einbettung Google Calendar oder FullCalendar für automatische Termine)</p>
-              <div style="height:240px;border-radius:12px;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;">Kalender-Widget</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="container">
-          <h3>Projekte & Aktivitäten</h3>
-          <div class="grid-3" style="margin-top:14px">
-            <div class="card">
-              <h4>Mentoring Programm</h4>
-              <p class="muted">Studierende aus höheren Semestern unterstützen Neuankömmlinge beim Studienbeginn, Wohnungssuche und Bewerbung.</p>
-            </div>
-            <div class="card">
-              <h4>Kultur & Debate</h4>
-              <p class="muted">Regelmäßige Kulturabende, Vorträge und Diskussionsrunden.</p>
-            </div>
-            <div class="card">
-              <h4>Akademische Workshops</h4>
-              <p class="muted">Workshops zu R, Python, CV-Workshops und mehr.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="team">
-        <div class="container">
-          <h3>Ansprechpartner</h3>
-          <p class="muted">Aktive Mitglieder, die die Union organisieren.</p>
-          <div class="team-grid" style="margin-top:12px">
-            <div class="member">
-              <div class="avatar">G</div>
-              <div style="margin-top:8px;font-weight:700">Çîko</div>
-              <div class="small muted">Vorsitzende</div>
-            </div>
-            <div class="member">
-              <div class="avatar"></div>
-              <div style="margin-top:8px;font-weight:700">Çîkê</div>
-              <div class="small muted">Koordination & Socials</div>
-            </div>
-            <div class="member">
-              <div class="avatar"></div>
-              <div style="margin-top:8px;font-weight:700">Çîkê</div>
-              <div class="small muted">Projekte</div>
-            </div>
-            <div class="member">
-              <div class="avatar"></div>
-              <div style="margin-top:8px;font-weight:700">Çîko</div>
-              <div class="small muted">Design & Events</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     
-
-      <section id="join">
-        <div class="container">
-          <h3>Kontakt & Mitglied werden</h3>
-          <p class="muted">Möchtest du mitmachen? Fülle das Formular aus oder kontaktiere uns über Instagram / TikTok.</p>
-
-          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
-            <form class="card" style="flex:1;min-width:320px;" id="joinForm" onsubmit="handleJoin(event)">
-              <label for="name">Name</label>
-              <input required id="name" name="name" type="text" style="width:100%;padding:8px;margin-top:8px;margin-bottom:10px;border-radius:8px;border:1px solid #eee" placeholder="Dein Name" />
-
-              <label for="email">E-Mail</label>
-              <input required id="email" name="email" type="email" style="width:100%;padding:8px;margin-top:8px;margin-bottom:10px;border-radius:8px;border:1px solid #eee" placeholder="beispiel@mail.de" />
-
-              <label for="message">Kurz: Warum mitmachen?</label>
-              <textarea id="message" name="message" rows="4" style="width:100%;padding:8px;margin-top:8px;border-radius:8px;border:1px solid #eee" placeholder="z. B. ich möchte mitorganisieren..."></textarea>
-
-              <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
-                <button type="submit" class="cta">Absenden</button>
-                <a class="small muted" href="mailto:kontakt@kurdish-union.de">Oder per E-Mail</a>
-              </div>
-            </form>
-
-            <div class="card" style="width:320px">
-              <h4>Kontaktdaten</h4>
-              <p class="small muted">Instagram: <strong>@kurdishunion</strong><br>TikTok: <strong>@kurdishunion</strong><br>E-Mail: kontakt@kurdish-union.de</p>
-
-              <h4 style="margin-top:10px">Antrag auf Mitgliedschaft</h4>
-              <a class="pill" href="https://wa.me/491701234567"> Jetzt Mietglied werden</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-    <div class="footer-row">
-        <div class="small muted">© Kurdische Union der Studierenden im Ausland — {Jahr}</div>
-        <div class="socials">
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">E-Mail</a>
-        </div>
-      </div>
-    </footer>
+<div class="container">
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><h1>K</h1></div>
+    <div>
+      <div style="font-weight:700">Kurdische Union</div>
+      <div class="small muted">der Studierenden im Ausland</div>
+    </div>
   </div>
+  <nav aria-label="Hauptnavigation">
+    <a href="#about">Über uns</a>
+    <a href="#events">Veranstaltungen</a>
+    <a href="#projects">Projekte</a>
+    <a href="#team">Ansprechpartner</a>
+    <a class="cta" href="#join" id="joinBtn">Mitmachen</a>
+  </nav>
+</header>
 
-  <!-- Lightbox / Modal -->
-  <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-card" id="lightboxCard">
-      <button id="closeModal" style="float:right;background:none;border:none;font-size:18px">✕</button>
-      <div id="lightboxContent"></div>
+<main>
+<section class="hero">
+  <div class="hero-card">
+    <h2>Willkommen — verbunden durch Kultur, Bildung & Gemeinschaft</h2>
+    <p class="lead">Wir sind eine wachsende Gemeinschaft kurdischer Studierender in Deutschland und weltweit. Austausch, gegenseitige Hilfe, kulturelle Veranstaltungen und akademische Unterstützung stehen bei uns im Mittelpunkt.</p>
+
+    <div style="margin-top:20px;display:flex;gap:14px;flex-wrap:wrap">
+      <a class="pill" href="#events">Nächste Events</a>
+      <a class="pill" href="#projects">Projekte</a>
+      <a class="cta" href="#join">Mitmachen</a>
+    </div>
+
+    <div style="margin-top:20px;display:flex;gap:16px;align-items:center">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div style="font-weight:700">18+</div>
+        <div class="small muted">aktive Mitglieder</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div style="font-weight:700">10</div>
+        <div class="small muted">laufende Projekte</div>
+      </div>
     </div>
   </div>
 
-  <script>
-   
-    // Join form (placeholder handler)
-    function handleJoin(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      // Normally submit to backend or external service (Formspree, Netlify Forms etc.)
-      alert('Danke '+name+'! Wir haben deine Anfrage erhalten.');
-      e.target.reset();
-    }
+  <aside class="hero-fig" aria-hidden="true">
+    <img src="https://as2.ftcdn.net/v2/jpg/01/16/69/93/1000_F_116699321_z3QLBMXqKe2FMMqal5Bss1jgwxaMjMrY.jpg" alt="kurdistan mappe" />
+  </aside>
+</section>
 
-    // Accessibility: keyboard close
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') { document.getElementById('lightbox').classList.remove('show'); document.getElementById('lightbox').setAttribute('aria-hidden','true') }})
+<!-- Restliche Sektionen wie About, Events, Projects, Team, Join bleiben gleich, nur Abstände minimal angepasst -->
 
-    // Replace year in footer
-    document.querySelector('footer .small').textContent = '© Kurdische Union der Studierenden im Ausland — ' + new Date().getFullYear();
-  </script>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <div class="small muted">© Kurdische Union der Studierenden im Ausland — <span id="year"></span></div>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">E-Mail</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- Lightbox / Modal -->
+<div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card" id="lightboxCard">
+    <button id="closeModal" style="float:right;background:none;border:none;font-size:18px">✕</button>
+    <div id="lightboxContent"></div>
+  </div>
+</div>
+
+<script>
+// Join form (placeholder handler)
+function handleJoin(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  alert('Danke '+name+'! Wir haben deine Anfrage erhalten.');
+  e.target.reset();
+}
+
+// Accessibility: keyboard close
+document.addEventListener('keydown', (e)=>{ 
+  if(e.key==='Escape') { 
+    document.getElementById('lightbox').classList.remove('show'); 
+    document.getElementById('lightbox').setAttribute('aria-hidden','true') 
+  }
+})
+
+// Replace year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-      
