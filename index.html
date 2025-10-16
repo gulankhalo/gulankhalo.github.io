@@ -67,9 +67,7 @@
     .member{background:var(--white);padding:14px;border-radius:12px;text-align:center}
     .avatar{width:92px;height:92px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
 
-    /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
+    
 
     /* Footer */
     footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(0,0,0,0.05)}
@@ -80,13 +78,12 @@
     @media (max-width:1000px){
       .hero{grid-template-columns:1fr}
       .team-grid{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
+     
       nav a{display:none}
     }
     @media (max-width:520px){
       .team-grid{grid-template-columns:1fr}
       .hero h2{font-size:28px}
-      .gallery img{height:120px}
       .logo{width:44px;height:44px}
     }
 
@@ -148,7 +145,7 @@
         </div>
 
         <aside class="hero-fig" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Gruppenfoto: Studierende bei einer Veranstaltung" />
+          <img src="https://share.google/images/NtQKNQfigCK1yhfUJ&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Gruppenfoto: Studierende bei einer Veranstaltung" />
         </aside>
       </section>
 
@@ -228,27 +225,27 @@
 
       <section id="team">
         <div class="container">
-          <h3>Team</h3>
+          <h3>Ansprechpartner</h3>
           <p class="muted">Aktive Mitglieder, die die Union organisieren.</p>
           <div class="team-grid" style="margin-top:12px">
             <div class="member">
               <div class="avatar">G</div>
-              <div style="margin-top:8px;font-weight:700">Gulan</div>
+              <div style="margin-top:8px;font-weight:700">Çîko</div>
               <div class="small muted">Vorsitzende</div>
             </div>
             <div class="member">
-              <div class="avatar">S</div>
-              <div style="margin-top:8px;font-weight:700">Sunda</div>
+              <div class="avatar"></div>
+              <div style="margin-top:8px;font-weight:700">Çîkê</div>
               <div class="small muted">Koordination & Socials</div>
             </div>
             <div class="member">
-              <div class="avatar">A</div>
-              <div style="margin-top:8px;font-weight:700">Ahmad</div>
+              <div class="avatar"></div>
+              <div style="margin-top:8px;font-weight:700">Çîkê</div>
               <div class="small muted">Projekte</div>
             </div>
             <div class="member">
-              <div class="avatar">L</div>
-              <div style="margin-top:8px;font-weight:700">Leyla</div>
+              <div class="avatar"></div>
+              <div style="margin-top:8px;font-weight:700">Çîko</div>
               <div class="small muted">Design & Events</div>
             </div>
           </div>
@@ -283,8 +280,8 @@
               <h4>Kontaktdaten</h4>
               <p class="small muted">Instagram: <strong>@kurdishunion</strong><br>TikTok: <strong>@kurdishunion</strong><br>E-Mail: kontakt@kurdish-union.de</p>
 
-              <h4 style="margin-top:10px">Schnell-Link</h4>
-              <a class="pill" href="https://wa.me/491701234567">WhatsApp: Jetzt beitreten</a>
+              <h4 style="margin-top:10px">Antrag auf Mitgliedschaft</h4>
+              <a class="pill" href="https://wa.me/491701234567"> Jetzt Mietglied werden</a>
             </div>
           </div>
         </div>
@@ -311,18 +308,7 @@
   </div>
 
   <script>
-    // Simple gallery lightbox
-    document.querySelectorAll('#galleryGrid img').forEach(img => {
-      img.addEventListener('click', ()=>{
-        const modal = document.getElementById('lightbox');
-        const content = document.getElementById('lightboxContent');
-        content.innerHTML = '<img src="'+img.src+'" alt="" style="max-width:100%;height:auto;border-radius:8px" />';
-        modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
-      })
-    })
-    document.getElementById('closeModal').addEventListener('click', ()=>{document.getElementById('lightbox').classList.remove('show');document.getElementById('lightbox').setAttribute('aria-hidden','true')})
-    document.getElementById('lightbox').addEventListener('click', (e)=>{ if(e.target===e.currentTarget) { document.getElementById('lightbox').classList.remove('show'); document.getElementById('lightbox').setAttribute('aria-hidden','true') }})
-
+   
     // Join form (placeholder handler)
     function handleJoin(e){
       e.preventDefault();
