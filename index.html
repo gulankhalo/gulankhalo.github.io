@@ -1,194 +1,302 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kurdische Union der Studierenden im Ausland</title>
-  <meta name="description" content="Gemeinschaft kurdischer Studierender im Ausland — Austausch, Kultur, Bildung und Unterstützung." />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- FontAwesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --brand:#C64C4C;
-      --accent:#A8A55B;
-      --bg:#FEE6A8;
-      --white:#ffffff;
-      --muted:#6b6b6b;
-      --radius:14px;
-      --glass: rgba(255,255,255,0.6);
-      --max-width:1100px;
-      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+    /* ----------------- Global Styles ----------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: 'Poppins', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color:#222;
-      background: linear-gradient(180deg, var(--bg), #fff);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FEE6A8;
+      color: #333;
+      line-height: 1.6;
     }
-    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-
-    header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
-    .logo h1{margin:0;font-size:18px;color:var(--brand);font-weight:700}
-    nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:500}
-    .cta{background:var(--brand);color:var(--white);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(198,76,76,0.18)}
-
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:28px;border-radius:20px;box-shadow:var(--shadow)}
-    .hero h2{margin:0;font-size:34px;color:var(--brand)}
-    .lead{margin-top:12px;color:var(--muted)}
-    .hero-fig{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-    .hero-fig img{width:100%;height:100%;object-fit:cover;display:block}
-
-    section{padding:32px 0}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
-
-    .events-list{display:grid;grid-template-columns:1fr;gap:12px}
-    .event{display:flex;align-items:center;gap:12px}
-    .event .date{min-width:72px;background:var(--bg);color:var(--brand);padding:8px;border-radius:10px;text-align:center;font-weight:700}
-
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;justify-items:center}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
-
-    footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(0,0,0,0.05);text-align:center}
-    .socials a{margin:0 10px;color:var(--brand);font-size:28px;text-decoration:none}
-
-    @media (max-width:1000px){
-      .hero{grid-template-columns:1fr}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      nav a{display:none}
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    @media (max-width:520px){
-      .hero h2{font-size:28px}
-      .gallery img{height:120px}
-      .logo{width:44px;height:44px}
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
-    .modal.show{visibility:visible;opacity:1}
-    .modal-card{max-width:760px;background:var(--white);border-radius:12px;padding:20px}
+    /* ----------------- Header / Navigation ----------------- */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+    }
+    nav a {
+      font-weight: 600;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #C64C4C;
+    }
 
-    .muted{color:var(--muted)}
-    .small{font-size:13px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--bg);font-weight:600}
-    .card:hover{transform:translateY(-6px);transition:transform .18s}
+    /* ----------------- Hero Section ----------------- */
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #FEE6A8;
+    }
+    #home h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #C64C4C;
+    }
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      max-width: 700px;
+    }
+    .cta-button {
+      background-color: #C64C4C;
+      color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(198,76,76,0.4);
+    }
+
+    /* ----------------- Sections ----------------- */
+    section {
+      padding: 60px 20px;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #C64C4C;
+    }
+
+    /* ----------------- Über uns ----------------- */
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* ----------------- Veranstaltungen ----------------- */
+    .events-container {
+      display: grid;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .event-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+    .event-card h3 {
+      color: #A8A55B;
+      margin-bottom: 10px;
+    }
+
+    /* ----------------- Projekte ----------------- */
+    .projects-container {
+      display: grid;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: #A8A55B;
+      margin-bottom: 10px;
+    }
+
+    /* ----------------- Galerie ----------------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* ----------------- Kontakt ----------------- */
+    #contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact input, #contact textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: none;
+    }
+    #contact button {
+      background-color: #A8A55B;
+      color: #fff;
+    }
+    #contact button:hover {
+      background-color: #C64C4C;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      font-weight: 700;
+      color: #C64C4C;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #A8A55B;
+    }
+
+    /* ----------------- Responsive ----------------- */
+    @media(max-width:768px){
+      #home h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 40px 15px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"><h1>K</h1></div>
-        <div>
-          <div style="font-weight:700">Kurdische Union</div>
-          <div class="small muted">der Studierenden im Ausland</div>
-        </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <a href="#home">Startseite</a>
+      <a href="#about">Über uns</a>
+      <a href="#events">Veranstaltungen</a>
+      <a href="#projects">Projekte</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <h1>Willkommen bei der Kurdischen Union der Studierenden im Ausland</h1>
+    <p>Wir verbinden kurdische Studierende weltweit durch Bildung, Kultur und Gemeinschaft. Werde Teil unserer wachsenden Gemeinschaft!</p>
+    <button class="cta-button">Mitmachen</button>
+    <img src="gruppenfoto.jpg" alt="Gruppenfoto der Union" style="margin-top:30px;">
+  </section>
+
+  <!-- Über uns -->
+  <section id="about">
+    <h2>Über uns</h2>
+    <p>Die Kurdische Union der Studierenden im Ausland ist eine wachsende Gemeinschaft kurdischer Studierender, die in Deutschland und weltweit studieren. Wir fördern den Austausch, die kulturelle Identität, Bildung und gegenseitige Unterstützung.</p>
+  </section>
+
+  <!-- Veranstaltungen -->
+  <section id="events">
+    <h2>Veranstaltungen</h2>
+    <div class="events-container">
+      <div class="event-card">
+        <h3>Kultureller Abend</h3>
+        <p>Datum: 25.10.2025 | Ort: Berlin | Beschreibung: Gemeinsamer kultureller Austausch mit Musik und Tanz.</p>
       </div>
-      <nav aria-label="Hauptnavigation">
-        <a href="#about">Über uns</a>
-        <a href="#events">Veranstaltungen</a>
-        <a href="#projects">Projekte</a>
-        <a class="cta" href="#join" id="joinBtn">Mitmachen</a>
-      </nav>
-    </header>
+      <div class="event-card">
+        <h3>Bildungsworkshop</h3>
+        <p>Datum: 05.11.2025 | Ort: München | Beschreibung: Workshop zu akademischen Erfolgsstrategien.</p>
+      </div>
+    </div>
+  </section>
 
-    <main>
-      <section class="hero">
-        <div class="hero-card">
-          <h2>Willkommen — verbunden durch Kultur, Bildung & Gemeinschaft</h2>
-          <p class="lead">Wir sind eine wachsende Gemeinschaft kurdischer Studierender in Deutschland und weltweit. Austausch, gegenseitige Hilfe, kulturelle Veranstaltungen und akademische Unterstützung stehen bei uns im Mittelpunkt.</p>
-          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-            <a class="pill" href="#events">Nächste Events</a>
-            <a class="pill" href="#projects">Projekte</a>
-            <a class="cta" href="#join">Mitmachen</a>
-          </div>
-        </div>
-        <aside class="hero-fig" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1603046891962-041569622f8f?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="Kurdische Studierende in Kulturaktivität" />
-        </aside>
-      </section>
+  <!-- Projekte & Aktivitäten -->
+  <section id="projects">
+    <h2>Projekte & Aktivitäten</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Mentoring-Programm</h3>
+        <p>Studierende unterstützen sich gegenseitig bei Studium und Karriereplanung.</p>
+      </div>
+      <div class="project-card">
+        <h3>Kulturelle Workshops</h3>
+        <p>Workshops zu kurdischer Musik, Tanz und Sprache.</p>
+      </div>
+    </div>
+  </section>
 
-      <section id="about">
-        <div class="container" style="text-align:center">
-          <h3>Unsere Vision & Werte</h3>
-          <p class="muted">Wir fördern Austausch, akademische Unterstützung und kulturelle Identität. Unsere Projekte stärken die Gemeinschaft kurdischer Studierender im Ausland.</p>
-          <ul style="list-style:none;padding:0;margin-top:14px">
-            <li>Offenheit und Zusammenhalt</li>
-            <li>Förderung von Bildung und Kultur</li>
-            <li>Unterstützung beim Studium & Alltag</li>
-          </ul>
-        </div>
-      </section>
+  <!-- Galerie -->
+  <section id="gallery">
+    <h2>Galerie</h2>
+    <div class="gallery-grid">
+      <img src="foto1.jpg" alt="Event Foto 1">
+      <img src="foto2.jpg" alt="Event Foto 2">
+      <img src="foto3.jpg" alt="Event Foto 3">
+      <img src="foto4.jpg" alt="Event Foto 4">
+    </div>
+  </section>
 
-      <section id="events">
-        <div class="container" style="text-align:center">
-          <h3>Veranstaltungen</h3>
-          <p class="muted">Kommende und vergangene Events — Workshops, Kulturabende, Tutorien und Netzwerk-Treffen.</p>
-        </div>
-      </section>
+  <!-- Kontakt -->
+  <section id="contact">
+    <h2>Kontakt / Mitglied werden</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="E-Mail" required>
+      <textarea placeholder="Nachricht" rows="5"></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://tiktok.com" target="_blank">TikTok</a>
+      <a href="mailto:info@union.de">E-Mail</a>
+    </div>
+  </section>
 
-      <section id="projects">
-        <div class="container" style="text-align:center">
-          <h3>Projekte & Aktivitäten</h3>
-          <div class="grid-3" style="margin-top:14px;justify-items:center">
-            <div class="card" style="max-width:320px">
-              <h4>Mentoring Programm</h4>
-              <p class="muted">Studierende unterstützen Neuankömmlinge beim Studienbeginn, Wohnungssuche und Bewerbung.</p>
-            </div>
-            <div class="card" style="max-width:320px">
-              <h4>Kultur & Debate</h4>
-              <p class="muted">Regelmäßige Kulturabende, Vorträge und Diskussionsrunden.</p>
-            </div>
-            <div class="card" style="max-width:320px">
-              <h4>Akademische Workshops</h4>
-              <p class="muted">Workshops zu Programmiersprachen, Bewerbung und Soft Skills.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery">
-        <div class="container" style="text-align:center">
-          <h3>Galerie</h3>
-          <p class="muted">Momente & Eindrücke aus unseren Treffen und Kulturveranstaltungen.</p>
-          <div class="gallery" style="margin-top:12px" id="galleryGrid">
-            <img src="https://images.unsplash.com/photo-1603046891962-041569622f8f?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Kurdistan Kultur"/>
-            <img src="https://images.unsplash.com/photo-1587620931362-ecb6dcdf2de6?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Kurdische Flagge"/>
-            <img src="https://images.unsplash.com/photo-1598360905775-1f0ab3510892?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Kulturelles Treffen"/>
-            <img src="https://images.unsplash.com/photo-1579547621706-1a9c79d5ed34?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Kurdische Musik"/>
-          </div>
-        </div>
-      </section>
-
-      <section id="join">
-        <div class="container" style="text-align:center">
-          <h3>Kontakt & Mitglied werden</h3>
-          <p class="muted">Möchtest du mitmachen? Fülle das Formular aus oder kontaktiere uns direkt über Social Media.</p>
-          <div style="margin-top:12px;display:flex;justify-content:center;gap:20px">
-            <a href="https://instagram.com/deinaccount" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@deinaccount" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="mailto:info@union.de" target="_blank" aria-label="E-Mail"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      &copy; 2025 Kurdische Union der Studierenden im Ausland
-    </footer>
-  </div>
 </body>
 </html>
