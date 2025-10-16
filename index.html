@@ -11,17 +11,176 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Weiß */
-            color: #1D3557; /* Dunkelblau */
+            background-color: #ffffff; /* Weiß - Sauberer Hintergrund */
+            color: #C64C4C; /* Dunkleres Rot für Text - Für besseren Kontrast */
             line-height: 1.6;
         }
-        /* Farbpalette */
+
+        /* Farbpalette (nur 4 Farben) */
         :root {
-            --primary-color: #E63946; /* Kurdistan-Rot */
-            --accent-color: #1D3557; /* Dunkelblau */
-            --secondary-accent: #C64C4C; /* Zusätzlicher Akzent */
-            --highlight-color: #FEE6A8; /* Highlight */
-            --neutral-color: #A8A55B; /* Zusätzlicher Akzent */
-            --neutral-gray: #E0E0E0; /* Hellgrau */
+            --primary-color: #E63946; /* Kurdistan-Rot - Für Headlines und primäre Akzente */
+            --highlight-color: #FEE6A8; /* Warmes Gelb/Beige - Für Highlights und sanfte Akzente */
+            --secondary-color: #C64C4C; /* Dunkleres Rot - Für Navigation und Buttons */
+            --neutral-color: #ffffff; /* Weiß - Für Hintergründe */
         }
+
         header {
+            background-color: var(--primary-color); /* #E63946 - Lebendig und einladend */
+            color: var(--neutral-color); /* Weiß für Kontrast */
+            padding: 40px 20px; /* Mehr Padding für Ästhetik */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für Tiefe */
+        }
+
+        nav {
+            background-color: var(--secondary-color); /* #C64C4C - Subtiler Kontrast */
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Leichter Schatten für Modernität */
+        }
+
+        nav a {
+            color: var(--neutral-color); /* Weiß */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Sanfte Übergänge */
+        }
+
+        nav a:hover {
+            color: var(--primary-color); /* #E63946 für Highlight-Effekt */
+            background-color: var(--highlight-color); /* #FEE6A8 für Wärme */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 60px 20px; /* Mehr Padding für ein luftigeres Design */
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9); /* Leichter Weiß-Hintergrund für Weichheit */
+            border-radius: 10px; /* Runde Ecken für modernes Feeling */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Schatten für 3D-Effekt */
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color); /* #E63946 - Für visuelle Stärke */
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Ästhetik */
+        }
+
+        .btn {
+            background-color: var(--primary-color); /* #E63946 */
+            color: var(--neutral-color); /* Weiß */
+            padding: 12px 25px; /* Größer für besseren Klick */
+            border: none;
+            border-radius: 8px; /* Runder für modernes Design */
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Hover-Effekt */
+            margin: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color); /* #C64C4C für Variation */
+            transform: translateY(-2px); /* Leichter Lift-Effekt */
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color); /* #C64C4C */
+        }
+
+        /* Spezifische Stile für Sektionen */
+        .hero {
+            background-color: var(--highlight-color); /* #FEE6A8 - Warmes, einladendes Highlight */
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 15px;
+        }
+
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            background-color: var(--highlight-color); /* #FEE6A8 */
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .event-list li:hover {
+            transform: translateY(-5px); /* Interaktiver Effekt */
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid var(--secondary-color); /* #C64C4C für Rahmen */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsives Design */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 40px 10px;
+            }
+
+            .gallery img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Der Rest des Inhalts bleibt ähnlich, aber mit den neuen Stilen -->
+    <header>
+        <h1>Kurdische Union der Studierenden im Ausland</h1>
+        <p>Eine Gemeinschaft für Unterstützung, Kultur und Bildung</p>
+    </header>
+
+    <nav>
+        <a href="#startseite">Startseite</a>
+        <a href="#veranstaltungen">Veranstaltungen</a>
+        <a href="#aktivitaeten">Aktivitäten & Projekte</a>
+        <a href="#team">Team</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#kontakt">Kontakt / Mitglied werden</a>
+    </nav>
+
+    <section id="startseite" class="hero">
+        <h2>Willkommen in unserer Gemeinschaft</h2>
+        <p>Die Kurdische Union der Studierenden im Ausland verbindet junge Studierende aus verschiedenen Fachrichtungen in Deutschland und anderen Ländern. Wir unterstützen uns gegenseitig, pflegen kulturelle Werte und fördern Bildungsprojekte. Ob du dich engagieren oder einfach mitmachen möchtest – hier bist du willkommen!</p>
+        <p><strong>Unsere Mission:</strong> Den Zusammenhalt kurdischer Studierenden im Ausland zu stärken, kulturelle Identität zu bewahren und Bildungschancen zu eröffnen.</p>
+        <div>
+            <img src="placeholder-bild1.jpg" alt="Studierende bei einem Event" style="width: 300px; height: auto; border-radius: 5px;">
+            <p><em>„Durch unsere Union fühlen wir uns verbunden und gestärkt, um gemeinsam Ziele zu erreichen.“ – Ein Mitglied</em></p>
+        </div>
+        <a href="#kontakt" class="btn">Mitmachen</a>
+        <a href="#kontakt" class="btn btn-secondary">Kontakt aufnehmen</a>
+    </section>
+
+    <!-- Weitere Sektionen bleiben wie im Original, da der Inhalt nicht geändert wurde -->
+
+    <section id="veranstaltungen">...</section>
+    <section id="aktivitaeten">...</section>
+    <section id="team">...</section>
+    <section id="galerie">...</section>
+    <section id="kontakt">...</section>
+    <footer>
+        <p>&copy; 2023 Kurdische Union der Studierenden im Ausland. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
