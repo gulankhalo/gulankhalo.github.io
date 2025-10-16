@@ -1,186 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurdische Union der Studierenden im Ausland</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Allgemeine Stile */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Weiß - Sauberer Hintergrund */
-            color: #C64C4C; /* Dunkleres Rot für Text - Für besseren Kontrast */
-            line-height: 1.6;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kurdische Union der Studierenden im Ausland</title>
+  <meta name="description" content="Gemeinschaft kurdischer Studierender im Ausland — Austausch, Kultur, Bildung und Unterstützung." />
 
-        /* Farbpalette (nur 4 Farben) */
-        :root {
-            --primary-color: #E63946; /* Kurdistan-Rot - Für Headlines und primäre Akzente */
-            --highlight-color: #FEE6A8; /* Warmes Gelb/Beige - Für Highlights und sanfte Akzente */
-            --secondary-color: #C64C4C; /* Dunkleres Rot - Für Navigation und Buttons */
-            --neutral-color: #ffffff; /* Weiß - Für Hintergründe */
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header {
-            background-color: var(--primary-color); /* #E63946 - Lebendig und einladend */
-            color: var(--neutral-color); /* Weiß für Kontrast */
-            padding: 40px 20px; /* Mehr Padding für Ästhetik */
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für Tiefe */
-        }
+  <style>
+    :root{
+      --brand:#C64C4C; /* tiefes Rot */
+      --accent:#A8A55B; /* gelbgrün */
+      --bg:#FEE6A8; /* helles warmes Beige */
+      --white:#ffffff;
+      --muted:#6b6b6b;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.6);
+      --max-width:1100px;
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Poppins', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#222;
+      background: linear-gradient(180deg, var(--bg), #fff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
 
-        nav {
-            background-color: var(--secondary-color); /* #C64C4C - Subtiler Kontrast */
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Leichter Schatten für Modernität */
-        }
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
 
-        nav a {
-            color: var(--neutral-color); /* Weiß */
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s ease, background-color 0.3s ease; /* Sanfte Übergänge */
-        }
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+    .logo h1{margin:0;font-size:18px;color:var(--brand);font-weight:700}
+    nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:500}
+    .cta{background:var(--brand);color:var(--white);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(198,76,76,0.18)}
 
-        nav a:hover {
-            color: var(--primary-color); /* #E63946 für Highlight-Effekt */
-            background-color: var(--highlight-color); /* #FEE6A8 für Wärme */
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:28px;border-radius:20px;box-shadow:var(--shadow)}
+    .hero h2{margin:0;font-size:34px;color:var(--brand)}
+    .lead{margin-top:12px;color:var(--muted)}
+    .hero-fig{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-fig img{width:100%;height:100%;object-fit:cover;display:block}
 
-        section {
-            padding: 60px 20px; /* Mehr Padding für ein luftigeres Design */
-            margin: 20px auto;
-            max-width: 1200px;
-            background-color: rgba(255, 255, 255, 0.9); /* Leichter Weiß-Hintergrund für Weichheit */
-            border-radius: 10px; /* Runde Ecken für modernes Feeling */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Schatten für 3D-Effekt */
-        }
+    /* sections */
+    section{padding:32px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
 
-        h1, h2, h3 {
-            color: var(--primary-color); /* #E63946 - Für visuelle Stärke */
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Ästhetik */
-        }
+    /* Events */
+    .events-list{display:grid;grid-template-columns:1fr;gap:12px}
+    .event{display:flex;align-items:center;gap:12px}
+    .event .date{min-width:72px;background:var(--bg);color:var(--brand);padding:8px;border-radius:10px;text-align:center;font-weight:700}
 
-        .btn {
-            background-color: var(--primary-color); /* #E63946 */
-            color: var(--neutral-color); /* Weiß */
-            padding: 12px 25px; /* Größer für besseren Klick */
-            border: none;
-            border-radius: 8px; /* Runder für modernes Design */
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Hover-Effekt */
-            margin: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
-        }
+    /* Team */
+    .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .member{background:var(--white);padding:14px;border-radius:12px;text-align:center}
+    .avatar{width:92px;height:92px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
 
-        .btn:hover {
-            background-color: var(--secondary-color); /* #C64C4C für Variation */
-            transform: translateY(-2px); /* Leichter Lift-Effekt */
-        }
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
 
-        .btn-secondary {
-            background-color: var(--secondary-color); /* #C64C4C */
-        }
+    /* Footer */
+    footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(0,0,0,0.05)}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .socials a{margin-left:10px;text-decoration:none;font-weight:600;color:var(--muted)}
 
-        /* Spezifische Stile für Sektionen */
-        .hero {
-            background-color: var(--highlight-color); /* #FEE6A8 - Warmes, einladendes Highlight */
-            text-align: center;
-            padding: 80px 20px;
-            border-radius: 15px;
-        }
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      nav a{display:none}
+    }
+    @media (max-width:520px){
+      .team-grid{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+      .gallery img{height:120px}
+      .logo{width:44px;height:44px}
+    }
 
-        .event-list {
-            list-style: none;
-            padding: 0;
-        }
+    /* Modal / Lightbox */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
+    .modal.show{visibility:visible;opacity:1}
+    .modal-card{max-width:760px;background:var(--white);border-radius:12px;padding:20px}
 
-        .event-list li {
-            background-color: var(--highlight-color); /* #FEE6A8 */
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--bg);font-weight:600}
 
-        .event-list li:hover {
-            transform: translateY(-5px); /* Interaktiver Effekt */
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-            border: 2px solid var(--secondary-color); /* #C64C4C für Rahmen */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Responsives Design */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 40px 10px;
-            }
-
-            .gallery img {
-                max-width: 100%;
-            }
-        }
-    </style>
+    /* subtle hover animation */
+    .card:hover, .member:hover{transform:translateY(-6px);transition:transform .18s}
+  </style>
 </head>
 <body>
-    <!-- Der Rest des Inhalts bleibt ähnlich, aber mit den neuen Stilen -->
+  <div class="container">
     <header>
-        <h1>Kurdische Union der Studierenden im Ausland</h1>
-        <p>Eine Gemeinschaft für Unterstützung, Kultur und Bildung</p>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><h1>K</h1></div>
+        <div>
+          <div style="font-weight:700">Kurdische Union</div>
+          <div class="small muted">der Studierenden im Ausland</div>
+        </div>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <a href="#about">Über uns</a>
+        <a href="#events">Veranstaltungen</a>
+        <a href="#projects">Projekte</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Galerie</a>
+        <a class="cta" href="#join" id="joinBtn">Mitmachen</a>
+      </nav>
     </header>
 
-    <nav>
-        <a href="#startseite">Startseite</a>
-        <a href="#veranstaltungen">Veranstaltungen</a>
-        <a href="#aktivitaeten">Aktivitäten & Projekte</a>
-        <a href="#team">Team</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#kontakt">Kontakt / Mitglied werden</a>
-    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Willkommen — verbunden durch Kultur, Bildung & Gemeinschaft</h2>
+          <p class="lead">Wir sind eine wachsende Gemeinschaft kurdischer Studierender in Deutschland und weltweit. Austausch, gegenseitige Hilfe, kulturelle Veranstaltungen und akademische Unterstützung stehen bei uns im Mittelpunkt.</p>
 
-    <section id="startseite" class="hero">
-        <h2>Willkommen in unserer Gemeinschaft</h2>
-        <p>Die Kurdische Union der Studierenden im Ausland verbindet junge Studierende aus verschiedenen Fachrichtungen in Deutschland und anderen Ländern. Wir unterstützen uns gegenseitig, pflegen kulturelle Werte und fördern Bildungsprojekte. Ob du dich engagieren oder einfach mitmachen möchtest – hier bist du willkommen!</p>
-        <p><strong>Unsere Mission:</strong> Den Zusammenhalt kurdischer Studierenden im Ausland zu stärken, kulturelle Identität zu bewahren und Bildungschancen zu eröffnen.</p>
-        <div>
-            <img src="placeholder-bild1.jpg" alt="Studierende bei einem Event" style="width: 300px; height: auto; border-radius: 5px;">
-            <p><em>„Durch unsere Union fühlen wir uns verbunden und gestärkt, um gemeinsam Ziele zu erreichen.“ – Ein Mitglied</em></p>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="pill" href="#events">Nächste Events</a>
+            <a class="pill" href="#projects">Projekte</a>
+            <a class="cta" href="#join">Mitmachen</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="font-weight:700">18+</div>
+              <div class="small muted">aktive Mitglieder</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="font-weight:700">10</div>
+              <div class="small muted">laufende Projekte</div>
+            </div>
+          </div>
         </div>
-        <a href="#kontakt" class="btn">Mitmachen</a>
-        <a href="#kontakt" class="btn btn-secondary">Kontakt aufnehmen</a>
-    </section>
 
-    <!-- Weitere Sektionen bleiben wie im Original, da der Inhalt nicht geändert wurde -->
+        <aside class="hero-fig" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Gruppenfoto: Studierende bei einer Veranstaltung" />
+        </aside>
+      </section>
 
-    <section id="veranstaltungen">...</section>
-    <section id="aktivitaeten">...</section>
-    <section id="team">...</section>
-    <section id="galerie">...</section>
-    <section id="kontakt">...</section>
+      <section id="about">
+        <div class="container">
+          <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <h3>Unsere Mission</h3>
+              <p class="muted">Die Kurdische Union der Studierenden im Ausland fördert Austausch, akademische Unterstützung und kulturelle Identität. Wir organisieren Veranstaltungen, Mentoring und Projekte, die unsere Gemeinschaft stärken.</p>
+            </div>
+            <div style="flex:1;min-width:260px">
+              <h3>Werte & Vision</h3>
+              <ul>
+                <li>Offenheit und Zusammenhalt</li>
+                <li>Förderung von Bildung und Kultur</li>
+                <li>Unterstützung beim Studium & Alltag</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events">
+        <div class="container">
+          <h3>Veranstaltungen</h3>
+          <p class="muted">Kommende und vergangene Events — Workshops, Kulturabende, Tutorien und Netzwerk-Treffen.</p>
+
+          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:14px">
+            <div class="card" style="flex:1;min-width:320px">
+              <h4>Kommende Events</h4>
+              <div class="events-list" id="upcomingEvents">
+                <!-- Beispiel-Events; ersetzen mit dynamischen Daten -->
+                <div class="event">
+                  <div class="date">18.11</div>
+                  <div>
+                    <div style="font-weight:700">Kulturabend: Kurdische Musik</div>
+                    <div class="small muted">Universität — 18:00</div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="date">25.11</div>
+                  <div>
+                    <div style="font-weight:700">Workshop: Lebenslauf & Bewerbung</div>
+                    <div class="small muted">Online — 17:00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="width:320px">
+              <h4>Interaktiver Kalender</h4>
+              <p class="small muted">(Optional: Einbettung Google Calendar oder FullCalendar für automatische Termine)</p>
+              <div style="height:240px;border-radius:12px;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;">Kalender-Widget</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h3>Projekte & Aktivitäten</h3>
+          <div class="grid-3" style="margin-top:14px">
+            <div class="card">
+              <h4>Mentoring Programm</h4>
+              <p class="muted">Studierende aus höheren Semestern unterstützen Neuankömmlinge beim Studienbeginn, Wohnungssuche und Bewerbung.</p>
+            </div>
+            <div class="card">
+              <h4>Kultur & Debate</h4>
+              <p class="muted">Regelmäßige Kulturabende, Vorträge und Diskussionsrunden.</p>
+            </div>
+            <div class="card">
+              <h4>Akademische Workshops</h4>
+              <p class="muted">Workshops zu R, Python, CV-Workshops und mehr.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <div class="container">
+          <h3>Team</h3>
+          <p class="muted">Aktive Mitglieder, die die Union organisieren.</p>
+          <div class="team-grid" style="margin-top:12px">
+            <div class="member">
+              <div class="avatar">G</div>
+              <div style="margin-top:8px;font-weight:700">Gulan</div>
+              <div class="small muted">Vorsitzende</div>
+            </div>
+            <div class="member">
+              <div class="avatar">S</div>
+              <div style="margin-top:8px;font-weight:700">Sunda</div>
+              <div class="small muted">Koordination & Socials</div>
+            </div>
+            <div class="member">
+              <div class="avatar">A</div>
+              <div style="margin-top:8px;font-weight:700">Ahmad</div>
+              <div class="small muted">Projekte</div>
+            </div>
+            <div class="member">
+              <div class="avatar">L</div>
+              <div style="margin-top:8px;font-weight:700">Leyla</div>
+              <div class="small muted">Design & Events</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="container">
+          <h3>Galerie</h3>
+          <p class="muted">Momente & Eindrücke aus unseren Treffen.</p>
+          <div class="gallery" style="margin-top:12px" id="galleryGrid">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Galerie Bild 1"/>
+            <img src="https://images.unsplash.com/photo-1520975917490-e6f41dfd0b58?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Galerie Bild 2"/>
+            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Galerie Bild 3"/>
+            <img src="https://images.unsplash.com/photo-1504461921965-3fa6bf0a13f8?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Galerie Bild 4"/>
+          </div>
+        </div>
+      </section>
+
+      <section id="join">
+        <div class="container">
+          <h3>Kontakt & Mitglied werden</h3>
+          <p class="muted">Möchtest du mitmachen? Fülle das Formular aus oder kontaktiere uns über Instagram / TikTok.</p>
+
+          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+            <form class="card" style="flex:1;min-width:320px;" id="joinForm" onsubmit="handleJoin(event)">
+              <label for="name">Name</label>
+              <input required id="name" name="name" type="text" style="width:100%;padding:8px;margin-top:8px;margin-bottom:10px;border-radius:8px;border:1px solid #eee" placeholder="Dein Name" />
+
+              <label for="email">E-Mail</label>
+              <input required id="email" name="email" type="email" style="width:100%;padding:8px;margin-top:8px;margin-bottom:10px;border-radius:8px;border:1px solid #eee" placeholder="beispiel@mail.de" />
+
+              <label for="message">Kurz: Warum mitmachen?</label>
+              <textarea id="message" name="message" rows="4" style="width:100%;padding:8px;margin-top:8px;border-radius:8px;border:1px solid #eee" placeholder="z. B. ich möchte mitorganisieren..."></textarea>
+
+              <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+                <button type="submit" class="cta">Absenden</button>
+                <a class="small muted" href="mailto:kontakt@kurdish-union.de">Oder per E-Mail</a>
+              </div>
+            </form>
+
+            <div class="card" style="width:320px">
+              <h4>Kontaktdaten</h4>
+              <p class="small muted">Instagram: <strong>@kurdishunion</strong><br>TikTok: <strong>@kurdishunion</strong><br>E-Mail: kontakt@kurdish-union.de</p>
+
+              <h4 style="margin-top:10px">Schnell-Link</h4>
+              <a class="pill" href="https://wa.me/491701234567">WhatsApp: Jetzt beitreten</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
     <footer>
-        <p>&copy; 2023 Kurdische Union der Studierenden im Ausland. Alle Rechte vorbehalten.</p>
+      <div class="footer-row">
+        <div class="small muted">© Kurdische Union der Studierenden im Ausland — {Jahr}</div>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">E-Mail</a>
+        </div>
+      </div>
     </footer>
+  </div>
+
+  <!-- Lightbox / Modal -->
+  <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card" id="lightboxCard">
+      <button id="closeModal" style="float:right;background:none;border:none;font-size:18px">✕</button>
+      <div id="lightboxContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // Simple gallery lightbox
+    document.querySelectorAll('#galleryGrid img').forEach(img => {
+      img.addEventListener('click', ()=>{
+        const modal = document.getElementById('lightbox');
+        const content = document.getElementById('lightboxContent');
+        content.innerHTML = '<img src="'+img.src+'" alt="" style="max-width:100%;height:auto;border-radius:8px" />';
+        modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
+      })
+    })
+    document.getElementById('closeModal').addEventListener('click', ()=>{document.getElementById('lightbox').classList.remove('show');document.getElementById('lightbox').setAttribute('aria-hidden','true')})
+    document.getElementById('lightbox').addEventListener('click', (e)=>{ if(e.target===e.currentTarget) { document.getElementById('lightbox').classList.remove('show'); document.getElementById('lightbox').setAttribute('aria-hidden','true') }})
+
+    // Join form (placeholder handler)
+    function handleJoin(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      // Normally submit to backend or external service (Formspree, Netlify Forms etc.)
+      alert('Danke '+name+'! Wir haben deine Anfrage erhalten.');
+      e.target.reset();
+    }
+
+    // Accessibility: keyboard close
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') { document.getElementById('lightbox').classList.remove('show'); document.getElementById('lightbox').setAttribute('aria-hidden','true') }})
+
+    // Replace year in footer
+    document.querySelector('footer .small').textContent = '© Kurdische Union der Studierenden im Ausland — ' + new Date().getFullYear();
+  </script>
 </body>
 </html>
