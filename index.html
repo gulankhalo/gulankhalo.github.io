@@ -34,7 +34,7 @@
       line-height:1.5;
     }
 
-    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    .container{max-width:var(--max-width);margin: 0 auto;padding:20px}
 
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
@@ -45,7 +45,7 @@
     .cta{background:var(--accent);color:var(--white);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(198,76,76,0.18)}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero{display:grid;grid-template-columns:1fr 440px;gap:28px;align-items:center;padding:36px 0}
     .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:28px;border-radius:20px;box-shadow:var(--shadow)}
     .hero h2{margin:0;font-size:34px;color:var(--brand)}
     .lead{margin-top:12px;color:var(--muted)}
@@ -53,32 +53,29 @@
     .hero-fig img{width:100%;height:100%;object-fit:cover;display:block}
 
     /* sections */
-    section{padding:32px 0}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    section{padding:1px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
     .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
 
     /* Events */
     .events-list{display:grid;grid-template-columns:1fr;gap:12px}
     .event{display:flex;align-items:center;gap:12px}
-    .event .date{min-width:72px;background:var(--bg);color:var(--brand);padding:8px;border-radius:10px;text-align:center;font-weight:700}
+    .event .date{min-width:72px;background:var(--accent);color:var(--white);padding:8px;border-radius:10px;text-align:center;font-weight:700}
 
     /* Team */
     .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .member{background:var(--white);padding:14px;border-radius:12px;text-align:center}
-    .avatar{width:92px;height:92px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
+    .avatar{width:122px;height:122px;border-radius:999px;margin:0 auto;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);box-shadow:var(--shadow)}
 
-    
 
-    /* Footer */
-    footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(0,0,0,0.05)}
-    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .socials a{margin-left:10px;text-decoration:none;font-weight:600;color:var(--muted)}
+
+
 
     /* Responsive */
     @media (max-width:1000px){
       .hero{grid-template-columns:1fr}
       .team-grid{grid-template-columns:repeat(2,1fr)}
-     
+
       nav a{display:none}
     }
     @media (max-width:520px){
@@ -95,8 +92,20 @@
     /* small helpers */
     .muted{color:var(--muted)}
     .small{font-size:13px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--bg);font-weight:600}
-
+    .pill{
+      display:inline-block;
+      padding: 10px 20px;
+      border-radius:999px;
+      background:var(--bg);
+      font-weight:600;
+      text-decoration: none;
+      color: #222;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pill:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
     /* subtle hover animation */
     .card:hover, .member:hover{transform:translateY(-6px);transition:transform .18s}
   </style>
@@ -116,7 +125,7 @@
         <a href="#events">Veranstaltungen</a>
         <a href="#projects">Projekte</a>
         <a href="#team">Ansprechpartner</a>
-        
+
         <a class="cta" href="#join" id="joinBtn">Mitmachen</a>
       </nav>
     </header>
@@ -172,11 +181,10 @@
           <h3>Veranstaltungen</h3>
           <p class="muted">Kommende und vergangene Events — Workshops, Kulturabende, Tutorien und Netzwerk-Treffen.</p>
 
-          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:14px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
             <div class="card" style="flex:1;min-width:320px">
               <h4>Kommende Events</h4>
               <div class="events-list" id="upcomingEvents">
-                <!-- Beispiel-Events; ersetzen mit dynamischen Daten -->
                 <div class="event">
                   <div class="date">18.11</div>
                   <div>
@@ -197,7 +205,7 @@
             <div class="card" style="width:320px">
               <h4>Interaktiver Kalender</h4>
               <p class="small muted">(Optional: Einbettung Google Calendar oder FullCalendar für automatische Termine)</p>
-              <div style="height:240px;border-radius:12px;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;">Kalender-Widget</div>
+              <div style="height:200px;border-radius:12px;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;">Kalender-Widget</div>
             </div>
           </div>
         </div>
@@ -227,24 +235,24 @@
         <div class="container">
           <h3>Ansprechpartner</h3>
           <p class="muted">Aktive Mitglieder, die die Union organisieren.</p>
-          <div class="team-grid" style="margin-top:12px">
+          <div class="team-grid" style="margin-top:55px">
             <div class="member">
-              <div class="avatar">G</div>
+              <div class="avatar">Ç</div>
               <div style="margin-top:8px;font-weight:700">Çîko</div>
               <div class="small muted">Vorsitzende</div>
             </div>
             <div class="member">
-              <div class="avatar"></div>
+              <div class="avatar">Ç</div>
               <div style="margin-top:8px;font-weight:700">Çîkê</div>
-              <div class="small muted">Koordination & Socials</div>
+              <div class="small muted">Çîk</div>
             </div>
             <div class="member">
-              <div class="avatar"></div>
+              <div class="avatar">Ç</div>
               <div style="margin-top:8px;font-weight:700">Çîkê</div>
-              <div class="small muted">Projekte</div>
+              <div class="small muted">Content Creating</div>
             </div>
             <div class="member">
-              <div class="avatar"></div>
+              <div class="avatar">Ç</div>
               <div style="margin-top:8px;font-weight:700">Çîko</div>
               <div class="small muted">Design & Events</div>
             </div>
@@ -252,7 +260,7 @@
         </div>
       </section>
 
-     
+
 
       <section id="join">
         <div class="container">
@@ -288,15 +296,7 @@
       </section>
 
     </main>
-    <div class="footer-row">
-        <div class="small muted">© Kurdische Union der Studierenden im Ausland — {Jahr}</div>
-        <div class="socials">
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">E-Mail</a>
-        </div>
-      </div>
-    </footer>
+
   </div>
 
   <!-- Lightbox / Modal -->
@@ -307,8 +307,54 @@
     </div>
   </div>
 
+
+  <footer style="
+  background: linear-gradient(to bottom, #ffffff, #FEE6A8);
+  color: #333;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+">
+    <div style="max-width: 900px; margin: 0 auto;">
+
+      <h3 style="font-size: 1.3rem; margin-bottom: 10px; letter-spacing: 0.5px;">
+        Kurdische Union der Studierenden im Ausland
+      </h3>
+      <p style="font-size: 0.95rem; color:#555; margin-bottom: 25px;">
+        Austausch · Kultur · Bildung · Zusammenhalt
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 25px; margin-bottom: 25px;">
+        <a href="https://www.instagram.com/" target="_blank" style="color:#C64C4C; text-decoration:none; font-size: 1.4rem;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" style="color:#C64C4C; text-decoration:none; font-size: 1.4rem;">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="mailto:info@kusa.org" style="color:#C64C4C; text-decoration:none; font-size: 1.4rem;">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #e0d7b3; margin: 25px 0;">
+
+      <p style="font-size: 0.85rem; color:#666;">
+        © Kurdische Union der Studierenden im Ausland —
+        <span id="year"></span>
+      </p>
+    </div>
+
+    <!-- Font Awesome für Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+
+
   <script>
-   
+
     // Join form (placeholder handler)
     function handleJoin(e){
       e.preventDefault();
@@ -322,9 +368,7 @@
     // Accessibility: keyboard close
     document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') { document.getElementById('lightbox').classList.remove('show'); document.getElementById('lightbox').setAttribute('aria-hidden','true') }})
 
-    // Replace year in footer
-    document.querySelector('footer .small').textContent = '© Kurdische Union der Studierenden im Ausland — ' + new Date().getFullYear();
-  </script>
+     </script>
 </body>
 </html>
-      
+
